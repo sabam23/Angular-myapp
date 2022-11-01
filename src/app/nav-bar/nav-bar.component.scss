@@ -1,0 +1,40 @@
+.nav-bar {
+    width: 70%;
+    height: 60px;
+    background-color: #eb4d55;
+    margin: 25px auto;
+    border-radius: 50px;
+    position: relative;
+
+    & > .content {
+        width: 90%;
+        display: flex;
+        margin: auto;
+        height: 100%;
+        align-items: center;
+
+        & >.nav-tab {
+            height: 95%;
+            color: white;
+            min-width: 80px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: #ef7076;
+                cursor: pointer;
+            }
+        }
+    }
+
+    & > .menu-icon {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+        color: white;
+        cursor: pointer;
+    }
+}
