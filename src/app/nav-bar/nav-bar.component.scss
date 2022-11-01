@@ -1,40 +1,92 @@
 .nav-bar {
-    width: 70%;
-    height: 60px;
-    background-color: #eb4d55;
-    margin: 25px auto;
-    border-radius: 50px;
-    position: relative;
+  width: 70%;
+  height: 60px;
+  background-color: #eb4d55;
+  margin: 25px auto;
+  border-radius: 50px;
+  position: relative;
+  user-select: none;
 
-    & > .content {
-        width: 90%;
-        display: flex;
-        margin: auto;
-        height: 100%;
-        align-items: center;
+  @media (max-width: 550px) {
+    min-height: 60px;
+    height: auto;
+    display: flex;
+    width: 80%;
+  }
 
-        & >.nav-tab {
-            height: 95%;
-            color: white;
-            min-width: 80px;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+  & > .content {
+    width: 89%;
+    display: flex;
+    margin: auto;
+    height: 100%;
+    align-items: center;
 
-            &:hover {
-                background-color: #ef7076;
-                cursor: pointer;
-            }
-        }
-    }
+    & > .nav-tab {
+      height: 92%;
+      color: white;
+      min-width: 80px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    & > .menu-icon {
-        position: absolute;
-        top: 50%;
-        right: 30px;
-        transform: translateY(-50%);
-        color: white;
+      &:hover {
+        background-color: #ef7076;
         cursor: pointer;
+        border-radius: 5px;
+      }
     }
+
+    @media (max-width: 550px) {
+      display: none;
+      &.is-open {
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding-left: 0;
+        margin-right: 10%;
+        margin: auto;
+
+        & > .nav-tab {
+          height: 55px;
+          width: 150px;
+          border-bottom: solid 2px white;
+          border-radius: 5px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  & > .menu-icon {
+    position: absolute;
+    top: 50%;
+    right: 5.5%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 550px) {
+      display: block;
+    }
+  }
+
+  & #ic{
+    display: none;
+    @media (max-width: 550px) {
+      display: block;
+      font-size: 25px;
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      transform: translateY(-68%);
+      color: white;
+    }
+
+    @media (max-width: 420px) {
+        left: 1%;
+      }
+  }
 }

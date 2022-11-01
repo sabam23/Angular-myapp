@@ -1,11 +1,12 @@
 <div class="nav-bar">
-    <div class="content">
+    <span class="material-symbols-outlined" id="ic">SM</span>
+    <div class="content" [class.is-open]="isMenuOpen">
         <div class="nav-tab">HOME</div>
         <div class="nav-tab">Quiz Game</div>
     </div>
 
     <!-- Menu For Responsive Layout -->
     <div class="menu-icon" (click)="toggleMenu()">
-        <span class="material-symbols-outlined">{{ isMenuOpen ? "close" : "menu"}}</span>
+        <span class="material-symbols-outlined">{{ isMenuOpen ? "close" : "menu" }}</span>
     </div>
 </div>
