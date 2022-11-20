@@ -57,7 +57,13 @@
           margin-bottom: 5px;
         }
       }
+      .active {
+        color: #cbf73e;
+        border-bottom: none;
+      }
     }
+
+    
   }
 
   & > .menu-icon {
@@ -90,4 +96,9 @@
         left: 1%;
       }
   }
+}
+
+.active {
+    border-bottom: solid white 4px;
+    border-radius: 2px;
 }
