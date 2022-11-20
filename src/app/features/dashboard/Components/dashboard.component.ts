@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { BehaviorSubject, tap, throttle, throttleTime } from 'rxjs';
 import { Question } from '../interfaces/question.interface';
 import { QuizService } from '../Services/quiz.service';
 
@@ -12,7 +13,11 @@ export class DashboardComponent implements OnInit {
 
   constructor(private quizService: QuizService) { }
 
-  questions: Question[] = [];
+  questions: BehaviorSubject<Question[]> = new BehaviorSubject<Question[]>(
+    [] as Question[]
+  );
+
+  toggleQuiz: boolean = false;
 
   ngOnInit(): void {
   }
@@ -24,13 +29,14 @@ export class DashboardComponent implements OnInit {
     }
   )
 
-  count: number = 0;
-
   getData(sliderValue: string) {
     this.quizService.getQuizData(
       this.quizForm.get("category")?.value,
       sliderValue,
       this.quizForm.get("difficulty")?.value
-    ).subscribe((data) => this.questions = data)
+    ).pipe(
+      tap((response) => this.questions.next(response)))
+      .subscribe();
+      this.toggleQuiz = true;
   }
 }
