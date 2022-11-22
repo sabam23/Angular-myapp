@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
   );
 
   toggleQuiz: boolean = false;
+  sliderValue!: number;
 
   ngOnInit(): void {
   }
@@ -36,7 +37,7 @@ export class DashboardComponent implements OnInit {
       this.quizForm.get("difficulty")?.value
     ).pipe(
       tap((response) => this.questions.next(response)))
-      .subscribe();
+      .subscribe(d => this.sliderValue = Number(sliderValue));
       this.toggleQuiz = true;
   }
 }

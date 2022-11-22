@@ -7,14 +7,16 @@ import { NavBarComponent } from './features/nav-bar/nav-bar.component';
 import { DashboardComponent } from './features/dashboard/Components/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { QuizComponent } from './features/quiz/quiz.component';
+import { QuizComponent } from './features/quiz/components/quiz/quiz.component';
+import { QuizResultComponent } from './features/quiz/components/quiz-result/quiz-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     DashboardComponent,
-    QuizComponent
+    QuizComponent,
+    QuizResultComponent
   ],
   imports: [
     BrowserModule,

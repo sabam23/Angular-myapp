@@ -1,0 +1,22 @@
+<div class="quiz">
+    <div class="question" *ngIf="!toggleResult">
+        <div class="question-order">
+            {{questionCount}} <span style="color: red; font-size: 25px">/</span><span style="color: #581758;;"> {{ questionsLimit }} </span>
+        </div>
+        <div class="title"> {{ question }}</div>
+        <div class="answers">
+            <form [formGroup]="QuizAnswers">
+                    <label class="container" *ngFor="let answer of answers">
+                        <div style="width: 80%;">{{ answer }}</div>
+                        <input type="radio" name="answer" [value]="answer" formControlName="answer">
+                        <span class="radio_class"></span>
+                    </label>
+                <button class="next-btn" (click)="nextQuestion()" *ngIf="!(questionCount === questionsLimit)" [disabled]="QuizAnswers.invalid">Next</button>
+                <button class="next-btn" *ngIf="questionCount === questionsLimit" (click)="finishQuiz()" [disabled]="QuizAnswers.invalid">Finish</button>
+            </form>   
+        </div>
+        <div class="timer">{{ timeLeft }}</div>
+    </div>
+
+    <app-quiz-result *ngIf="toggleResult" [correctCount]="correctCount"></app-quiz-result>
+</div>

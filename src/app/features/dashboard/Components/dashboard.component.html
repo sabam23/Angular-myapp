@@ -30,5 +30,5 @@
         <button (click)="getData(slider.value)" [disabled]="quizForm.invalid">Start Quiz</button>
     </form>
 
-    <app-quiz *ngIf="toggleQuiz" [questions]="questions"></app-quiz>
+    <app-quiz *ngIf="toggleQuiz" [questions]="questions" [questionsLimit]="sliderValue"></app-quiz>
 </div>
