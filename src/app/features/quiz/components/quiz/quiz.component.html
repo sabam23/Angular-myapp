@@ -15,7 +15,7 @@
                 <button class="next-btn" *ngIf="questionCount === questionsLimit" (click)="finishQuiz()" [disabled]="QuizAnswers.invalid">Finish</button>
             </form>   
         </div>
-        <div class="timer">{{ timeLeft }}</div>
+        <div class="timer" [ngClass]="timeLeft < 11 ? 'red' : ''">{{ timeLeft }}</div>
     </div>
 
     <app-quiz-result *ngIf="toggleResult" [correctCount]="correctCount"></app-quiz-result>
