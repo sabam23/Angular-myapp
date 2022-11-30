@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class QuizResultComponent implements OnInit {
 
   @Input() correctCount!: number;
+  @Input() questionCount!: number;
 
   constructor() { }
 
