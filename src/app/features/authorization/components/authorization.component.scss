@@ -1,0 +1,145 @@
+.auth-container {
+    width: 500px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+  
+    & > .tab-list {
+      width: 100%;
+      background: #38383f;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 15px;
+  
+      & > div {
+        color: white;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        width: 100px;
+        height: 90%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        &:hover {
+          background: #5c5c6a;
+        }
+      }
+    }
+  
+    & .auth-title {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 40px;
+      padding: 25px 0 25px 0;
+      border-bottom: solid 1px #dedede;
+    }
+  }
+  
+  .form {
+    & > form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+      font-family: Raleway, "sans-serif";
+      font-size: 17px;
+      margin-top: 25px;
+      margin-bottom: 50px;
+  
+      & > p > a {
+        font-size: 18px;
+        border-bottom: solid red 2px;
+        padding-bottom: 1px;
+        margin-left: 10px;
+        font-family: "Ubuntu", sans-serif;
+        cursor: pointer;
+  
+        &:hover {
+          color: red;
+          border-bottom: solid black 2px;
+        }
+      }
+  
+      & input {
+        width: 490px;
+        height: 40px;
+        border: solid #171717 1px;
+        border-radius: 7px;
+        padding-left: 10px;
+        margin-top: 7px;
+      }
+  
+      & input[type="number"] {
+        width: 150px;
+      }
+  
+      select {
+        text-align: center;
+        width: 165px;
+        height: 43px;
+        border: solid #171717 1px;
+        border-radius: 7px;
+        padding-left: 10px;
+        margin-top: 7px;
+      }
+  
+      & > button {
+        width: 110px;
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #ee0000;
+        color: white;
+        font-family: "Ubuntu", sans-serif;
+  
+        &:disabled {
+          background: #5c5c6a;
+          cursor: none;
+  
+          &:hover {
+            background: #5c5c6a;
+            cursor: no-drop;
+            color: white;
+            border: none;
+          }
+        }
+  
+        &:hover {
+          background: white;
+          border: solid #ee0000 2px;
+          color: black;
+        }
+      }
+    }
+  }
+  
+  .error-container {
+    margin-top: 20px;
+    color: red;
+    font-family: Raleway, sans-serif;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .active {
+    border-bottom: red solid 5px;
+  }
+  
+  .ng-valid:not(form, #repPassword, .signin) {
+    box-shadow: lightgreen 10px 10px;
+  }
+  .ng-invalid:not(form).ng-touched {
+    box-shadow: lightcoral 10px 10px;
+  }
+  
+  @media screen and (max-width: 520px) {
+    .auth-container {
+      width: 300px;
+    }
+  }

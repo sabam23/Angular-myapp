@@ -1,0 +1,18 @@
+{
+    "users": [
+        {
+          "id": 1,
+          "username": "sabam23",
+          "email": "sabamchedlishvili17@gmail.com",
+          "password": "sabasaba",
+          "repeatPassword": "sabasaba"
+        },
+        {
+          "username": "george69",
+          "email": "george@gmail.com",
+          "password": "1234567",
+          "repeatPassword": "1234567",
+          "id": 2
+        }
+      ]
+}

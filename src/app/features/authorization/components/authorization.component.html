@@ -1,0 +1,214 @@
+<div class="auth-container">
+  <div class="tab-list">
+    <div
+      [ngClass]="loginPage ? 'active' : ''"
+      (click)="loginPage = true; registerPage = false"
+    >
+      Sign In
+    </div>
+    <div
+      [ngClass]="registerPage ? 'active' : ''"
+      (click)="loginPage = false; registerPage = true"
+    >
+      Register
+    </div>
+  </div>
+
+  <div class="auth-content">
+    <ng-container *ngIf="loginPage">
+      <h1 class="auth-title">Sign In</h1>
+      <div class="form">
+        <form [formGroup]="loginForm">
+          <label>
+            Email Address
+            <br />
+            <input
+              type="email"
+              placeholder="Email"
+              formControlName="email"
+              class="signin"
+            />
+            <div
+              class="error-container"
+              *ngIf="
+                loginForm.get('email')?.errors &&
+                (loginForm.get('email')?.touched ||
+                  loginForm.get('email')?.invalid)
+              "
+            >
+              <p *ngIf="loginForm.get('email')?.errors?.['account']">
+                Account not found!
+              </p>
+              <p *ngIf="loginForm.get('email')?.errors?.['email']">
+                Enter Valid mail address!
+              </p>
+              <p *ngIf="loginForm.get('email')?.errors?.['empty']">
+                Please Enter Email!
+              </p>
+            </div>
+          </label>
+          <label>
+            Password
+            <br />
+            <input
+              type="password"
+              placeholder="*********"
+              formControlName="password"
+              class="signin"
+            />
+            <div
+              class="error-container"
+              *ngIf="
+                loginForm.get('password')?.errors &&
+                loginForm.get('password')?.touched
+              "
+            >
+              <p *ngIf="loginForm.get('password')?.errors?.['password']">
+                Incorrect password
+              </p>
+              <p *ngIf="loginForm.get('password')?.errors?.['required']">
+                Please Enter Password!
+              </p>
+            </div>
+          </label>
+          <button type="button" class="signIn-btn" (click)="login()">
+            SIGN IN
+          </button>
+          <p>
+            Don't have an account yet?
+            <a (click)="loginPage = false; registerPage = true">Register</a>
+          </p>
+        </form>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="registerPage">
+      <h1 class="auth-title">Create Account</h1>
+      <div class="form">
+        <form [formGroup]="registerForm">
+          <label>
+            Username
+            <br />
+            <input
+              type="text"
+              placeholder="Username"
+              formControlName="username"
+            />
+            <div
+              class="error-container"
+              *ngIf="
+                registerForm.get('firstname')?.errors &&
+                registerForm.get('firstname')?.touched
+              "
+            >
+              <p *ngIf="registerForm.get('firstname')?.errors?.['required']">
+                Name field is required!
+              </p>
+              <p *ngIf="registerForm.get('firstname')?.errors?.['pattern']">
+                Enter valid name!
+              </p>
+            </div>
+          </label>
+          <label>
+            Email
+            <br />
+            <input
+              type="email"
+              placeholder="Email address"
+              formControlName="email"
+            />
+            <div
+              class="error-container"
+              *ngIf="
+                registerForm.get('email')?.errors &&
+                registerForm.get('email')?.touched
+              "
+            >
+              <p *ngIf="registerForm.get('email')?.errors?.['required']">
+                Email field is required!
+              </p>
+              <p *ngIf="registerForm.get('email')?.errors?.['email']">
+                Enter valid Email Address!
+              </p>
+            </div>
+          </label>
+          <label>
+            Password
+            <br />
+            <input
+              type="password"
+              placeholder="*********"
+              formControlName="password"
+            />
+            <div
+              class="error-container"
+              *ngIf="
+                registerForm.get('password')?.errors &&
+                registerForm.get('password')?.touched
+              "
+            >
+              <p *ngIf="registerForm?.get('password')?.errors?.['required']">
+                Password field is required!
+              </p>
+              <p *ngIf="registerForm.get('password')?.errors?.['pattern']">
+                Enter valid password
+              </p>
+              <p *ngIf="registerForm.get('password')?.errors?.['minlength']">
+                Password is too small!
+              </p>
+            </div>
+          </label>
+          <label>
+            Repeat password
+            <br />
+            <input
+              type="password"
+              placeholder="*********"
+              formControlName="repeatPassword"
+              id="repPassword"
+              [ngClass]="
+                registerForm.get('repeatPassword')?.value !==
+                registerForm.get('password')?.value
+                  ? 'ng-invalid'
+                  : 'ng-valid'
+              "
+            />
+            <div
+              class="error-container"
+              *ngIf="
+                registerForm.get('repeatPassword')?.touched &&
+                registerForm.invalid
+              "
+            >
+              <p
+                *ngIf="
+                  registerForm.invalid &&
+                  registerForm.get('repeatPassword')?.value !==
+                    registerForm.get('password')?.value
+                "
+              >
+                Password doesn't match
+              </p>
+            </div>
+            <p
+              *ngIf="
+                registerForm.get('repeatPassword')?.value &&
+                registerForm.get('repeatPassword')?.value ===
+                  registerForm.get('password')?.value
+              "
+              style="text-align: center; color: green"
+            >
+              Password Match
+            </p>
+          </label>
+          <button
+            class="signIn-btn"
+            (click)="addStudent(); loginPage = true; registerPage = false"
+            [disabled]="registerForm.invalid"
+          >
+            REGISTER
+          </button>
+        </form>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './features/nav-bar/nav-bar.component';
 import { DashboardComponent } from './features/dashboard/Components/dashboard.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuizComponent } from './features/quiz/components/quiz/quiz.component';
 import { QuizResultComponent } from './features/quiz/components/quiz-result/quiz-result.component';
+import { AuthorizationComponent } from './features/authorization/components/authorization.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { QuizResultComponent } from './features/quiz/components/quiz-result/quiz
     NavBarComponent,
     DashboardComponent,
     QuizComponent,
-    QuizResultComponent
+    QuizResultComponent,
+    AuthorizationComponent
   ],
   imports: [
     BrowserModule,
