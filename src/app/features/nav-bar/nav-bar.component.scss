@@ -52,14 +52,12 @@
         & > .nav-tab {
           height: 55px;
           width: 150px;
-          border-bottom: solid 2px white;
           border-radius: 5px;
           margin-bottom: 5px;
         }
       }
       .active {
-        color: #cbf73e;
-        border-bottom: none;
+        border-bottom: white solid 1px;
       }
     }
 

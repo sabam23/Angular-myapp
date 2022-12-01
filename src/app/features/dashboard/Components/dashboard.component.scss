@@ -8,23 +8,42 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(164, 207, 195);
+  background-color: #98c6b9;
   position: relative;
+
+  @media (max-width: 700px) {
+    width: 80%;
+  }
 
   & > .quiz-form {
     display: flex;
     min-width: 700px;
+    max-width: 800px;
     height: auto;
     align-items: center;
     flex-direction: column;
     color: black;
     row-gap: 35px;
     text-align: center;
+    @media (max-width: 1024px) {
+      min-width: 300px;
+    }
 
     & > div {
       display: flex;
       justify-content: space-around;
       width: 100%;
+
+      @media (max-width: 1150px) {
+        justify-content: space-evenly;
+      }
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 30px;
+      }
     }
 
     & select {

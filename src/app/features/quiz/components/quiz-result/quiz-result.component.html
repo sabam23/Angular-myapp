@@ -1,5 +1,5 @@
 <div class="result">
     <div class="result-text" title="result">{{ correctCount / questionCount | percent }}</div>
-    <p title="quiz info">You answered <span>{{correctCount}}</span> questions correctly, <br> out of <span>{{ questionCount }}</span></p>
+    <p title="quiz info"><span>{{correctCount}}</span> correct answer, <br> out of <span>{{ questionCount }}</span> questions</p>
     <button (click)="reLoad()" class="btn">Start New Quiz</button>
 </div>

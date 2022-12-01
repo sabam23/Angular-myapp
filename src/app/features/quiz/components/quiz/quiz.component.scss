@@ -1,23 +1,32 @@
 .quiz {
-  margin-top: 80px;
   max-width: 500px;
   
   & .question {
-    max-height: 500px;
+    max-height: 600px;
   }
 
   & .title {
     color: white;
     text-align: center;
     font-size: 27px;
-    margin-bottom: 35px;
     font-weight: bold;
+    margin: auto;
+    margin-bottom: 35px;
+
+    @media (max-width: 535px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   & .answers {
     width: 400px;
     margin: auto;
     max-height: fit-content;
+
+    @media (max-width: 535px) {
+      width: 300px;
+    }
   }
 
   & .timer {
@@ -57,6 +66,9 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    @media (max-width: 535px) {
+      font-size: 15px;
+    }
 
     &:hover input ~ .radio_class {
       background-color: #71c5ce;
@@ -67,7 +79,7 @@
       opacity: 0;
 
       &:checked ~ .radio_class {
-        background-color: #728c00;
+        background-color: rgb(88, 23, 88);
       }
     }
   }
@@ -103,7 +115,6 @@
     color: white;
     cursor: pointer;
     margin-top: 10px;
-    margin-bottom: 30px;
 
     &:hover {
       background-color: rgb(116, 39, 116);
