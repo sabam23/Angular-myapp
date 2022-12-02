@@ -79,7 +79,7 @@
       opacity: 0;
 
       &:checked ~ .radio_class {
-        background-color: rgb(88, 23, 88);
+        background-color: #59ff2f
       }
     }
   }
@@ -110,19 +110,20 @@
     height: 40px;
     text-align: center;
     border: none;
-    border-radius: 10px;
-    background: rgb(88, 23, 88);
+    border-bottom: solid #ed6d74 3px;
+    background: #38383f;
     color: white;
     cursor: pointer;
     margin-top: 10px;
 
     &:hover {
-      background-color: rgb(116, 39, 116);
+      border-bottom: #eb4d55  solid 3px;
     }
 
     &:disabled {
-      background-color: rgb(189, 184, 184);
       cursor: not-allowed;
+      color: azure;
+      border-bottom: solid white 3px;
     }
   }
 }

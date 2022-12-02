@@ -1,7 +1,7 @@
 <div class="quiz">
     <div class="question" *ngIf="!toggleResult">
         <div class="question-order">
-            {{questionCount}} <span style="color: red; font-size: 25px">/</span><span style="color: #581758;;"> {{ questionsLimit }} </span>
+            {{questionCount}} <span style="color: red; font-size: 25px">/</span> {{ questionsLimit }}
         </div>
         <div class="title"> {{ question }}</div>
         <div class="answers">
@@ -11,7 +11,7 @@
                         <input type="radio" name="answer" [value]="answer" formControlName="answer">
                         <span class="radio_class"></span>
                     </label>
-                <button class="next-btn" (click)="nextQuestion()" *ngIf="!(questionCount === questionsLimit)" [disabled]="QuizAnswers.invalid">Next</button>
+                <button class="next-btn" (click)="nextQuestion()" *ngIf="!(questionCount === questionsLimit)" [disabled]="QuizAnswers.invalid">NEXT</button>
                 <button class="next-btn" *ngIf="questionCount === questionsLimit" (click)="finishQuiz()" [disabled]="QuizAnswers.invalid">Finish</button>
             </form>   
         </div>

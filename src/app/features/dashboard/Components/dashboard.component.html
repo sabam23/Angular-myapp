@@ -23,7 +23,7 @@
             <label>
                 
                 <input type="range" min="1" max="20" value="10" class="slider" step="1" formControlName="limit" #slider>
-                {{ slider.value }}
+                <span style="color: white;">{{ slider.value }}</span>
             </label>
         </div>
         <button (click)="getData(slider.value)" [disabled]="quizForm.invalid">START</button>
