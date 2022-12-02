@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { passwordValidator } from '../validators/password.validator';
+import { passwordValidator } from '../../../core/validators/password.validator';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 import { User } from '../interfaces/user.interface';
 import { LoginForm } from '../interfaces/loginForm.inreface';
 import { UserForm } from '../interfaces/userForm.interface';
+import { AuthorizationService } from 'src/app/core/services/authorization.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ import { UserForm } from '../interfaces/userForm.interface';
 })
 
 export class AuthorizationComponent implements OnInit {
-  constructor(private loginService: LoginService, private router: Router) {}
+  constructor(private loginService: LoginService, private router: Router, private auth: AuthorizationService) {}
 
   ngOnInit(): void {
     this.getFullData();
@@ -50,10 +51,10 @@ export class AuthorizationComponent implements OnInit {
     for (let user of this.usersArray) {
       if (this.loginForm.get('email')?.value === user.email) {
         if (user.password === this.loginForm.get('password')?.value) {
-          this.loginService.isLoggedIn = true;
-          this.loginService.loggedId = user.id;
-          this.loginService.changeName(`${user.firstname} ${user.lastname}`);
-          this.router.navigateByUrl('/forum').then();
+          this.auth.isLoggedIn = true;
+          this.auth.loggedId = user.id;
+          this.auth.changeName(user.username);
+          this.router.navigateByUrl('/quiz').then();
           this.registerForm.reset();
           break;
         } else {
@@ -83,7 +84,7 @@ export class AuthorizationComponent implements OnInit {
     <UserForm>{
       username: new FormControl<string>('', [
         Validators.required,
-        Validators.pattern('^[a-zA-Z-]*$')
+        Validators.pattern('^[A-Za-z0-9]*$')
       ]),
       email: new FormControl<string>('', [
         Validators.required,

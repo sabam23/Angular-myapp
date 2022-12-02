@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    component: AuthorizationComponent
+    component: AuthorizationComponent,
   }
 ];
 

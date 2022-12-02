@@ -9,16 +9,9 @@ import { User } from '../interfaces/user.interface';
 export class LoginService {
   constructor(private http: HttpClient) {}
 
-  public isLoggedIn: boolean = false;
   private baseUrl = 'http://localhost:3000/';
-  public loggedId: number = 0;
 
-  username = new BehaviorSubject<string>('');
-  currentUsername = this.username.asObservable();
-
-  changeName(username: string) {
-    this.username.next(username);
-  }
+  
 
   addStudent(payload: User) {
     return this.http.post(this.baseUrl + 'users', payload);

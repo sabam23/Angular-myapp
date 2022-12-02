@@ -21,8 +21,15 @@
     margin: auto;
     height: 100%;
     align-items: center;
+    flex-flow: row;
+    
 
-    & > .nav-tab {
+    & .username {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 22px;
+    }
+
+    &  .nav-tab {
       height: 92%;
       color: white;
       min-width: 80px;
@@ -30,6 +37,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:last-child {
+        margin-left: auto;
+      }
 
       &:hover {
         background-color: #ef7076;
