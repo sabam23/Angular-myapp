@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { QuizComponent } from './features/quiz/components/quiz/quiz.component';
 import { QuizResultComponent } from './features/quiz/components/quiz-result/quiz-result.component';
 import { AuthorizationComponent } from './features/authorization/components/authorization.component';
+import { HomeComponent } from './features/homePage/components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AuthorizationComponent } from './features/authorization/components/auth
     DashboardComponent,
     QuizComponent,
     QuizResultComponent,
-    AuthorizationComponent
+    AuthorizationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

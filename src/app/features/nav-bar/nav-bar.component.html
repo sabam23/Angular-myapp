@@ -1,7 +1,7 @@
 <div class="nav-bar">
     <span class="material-symbols-outlined" id="ic">SM</span>
     <div class="content" [class.is-open]="isMenuOpen">
-        <div class="nav-tab" routerLinkActive="active">HOME</div>
+        <div class="nav-tab" routerLinkActive="active" routerLink="home">HOME</div>
         <div class="nav-tab" routerLink="/quiz" routerLinkActive="active" *ngIf="auth.isLoggedIn">Quiz Game</div>
         <div class="nav-tab usernmae" *ngIf="auth.isLoggedIn" title="username">{{ this.auth.username | async }}</div>
         <div class="nav-tab" routerLink="/auth" routerLinkActive="active" *ngIf="!auth.isLoggedIn">Log In</div>

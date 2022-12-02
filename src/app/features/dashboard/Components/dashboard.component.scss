@@ -23,7 +23,7 @@
     align-items: center;
     flex-direction: column;
     color: black;
-    row-gap: 35px;
+    row-gap: 40px;
     text-align: center;
     @media (max-width: 1024px) {
       min-width: 300px;
@@ -49,10 +49,10 @@
     & select {
       cursor: pointer;
       border: none;
-      width: 180px;
+      width: 200px;
       height: 40px;
       background-color: white;
-      border-radius: 7px;
+      border-radius: 8px;
       text-align: center;
       margin-top: 5px;
       display: inline-block;
@@ -65,6 +65,7 @@
       -webkit-border-radius: 4px;
       -moz-border-radius: 4px;
       border-radius: 4px;
+      overflow: hidden;
 
       &:focus {
         border-left: #eb4d55 solid 3px;
@@ -74,7 +75,7 @@
 
     .slider {
       margin-top: 20px;
-      width: 180px;
+      width: 200px;
       height: 10px;
       border-radius: 5px;
       background: white;

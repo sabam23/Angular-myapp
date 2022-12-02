@@ -15,7 +15,7 @@
   }
 
   & > .content {
-    width: 95%;
+    width: 96%;
     display: flex;
     margin: auto;
     height: 100%;
@@ -23,20 +23,23 @@
     flex-flow: row;
 
     &  .nav-tab {
-      height: 92%;
+      height: 99%;
       color: white;
-      min-width: 80px;
-      padding: 10px;
+      min-width: 90px;
+      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
 
       &:last-child {
         margin-left: auto;
+        @media (max-width: 550px) { 
+          margin-left: 0;
+        }
       }
 
       &:hover {
-        background-color: #ef7076;
+        background-color: #eb666d;
         cursor: pointer;
         border-radius: 5px;
       }
@@ -56,12 +59,12 @@
         & > .nav-tab {
           height: 55px;
           width: 150px;
-          border-radius: 5px;
+          border-radius: 2px;
           margin-bottom: 5px;
         }
       }
       .active {
-        border-bottom: white solid 1px;
+        border-bottom: #38383f solid 3px;
       }
     }
 
@@ -101,6 +104,6 @@
 }
 
 .active {
-    border-bottom: solid white 4px;
+    border-bottom: solid #38383f 4px;
     border-radius: 2px;
 }

@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthorizationComponent } from './features/authorization/components/authorization.component';
+import { HomeComponent } from './features/homePage/components/home/home.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
   {
     path: 'quiz',
     loadChildren: () =>
@@ -13,6 +19,10 @@ const routes: Routes = [
   {
     path: 'auth',
     component: AuthorizationComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   }
 ];
 
