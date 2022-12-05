@@ -26,7 +26,7 @@
                 <span style="color: white;">{{ slider.value }}</span>
             </label>
         </div>
-        <button (click)="getData(slider.value)" [disabled]="quizForm.invalid">START</button>
+        <button (click)="getData(slider.value)" [disabled]="quizForm.invalid" type="button">START</button>
     </form>
 
     <app-quiz *ngIf="toggleQuiz" [questions]="questions" [questionsLimit]="sliderValue"></app-quiz>

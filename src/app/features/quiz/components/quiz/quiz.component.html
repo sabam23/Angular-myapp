@@ -12,7 +12,7 @@
                         <span class="radio_class"></span>
                     </label>
                 <button class="next-btn" (click)="nextQuestion()" *ngIf="!(questionCount === questionsLimit)" [disabled]="QuizAnswers.invalid">NEXT</button>
-                <button class="next-btn" *ngIf="questionCount === questionsLimit" (click)="finishQuiz()" [disabled]="QuizAnswers.invalid">Finish</button>
+                <button class="next-btn" *ngIf="questionCount === questionsLimit" (click)="finishQuiz()" [disabled]="QuizAnswers.invalid" type="button">Finish</button>
             </form>   
         </div>
         <div class="timer" [ngClass]="timeLeft < 11 ? 'red' : ''">{{ timeLeft }}<sub style="font-size: 20px;">s</sub></div>
