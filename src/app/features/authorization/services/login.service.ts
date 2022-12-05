@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { User } from '../interfaces/user.interface';
 
 @Injectable({
@@ -10,8 +10,6 @@ export class LoginService {
   constructor(private http: HttpClient) {}
 
   private baseUrl = 'http://localhost:3000/';
-
-  
 
   addStudent(payload: User) {
     return this.http.post(this.baseUrl + 'users', payload);

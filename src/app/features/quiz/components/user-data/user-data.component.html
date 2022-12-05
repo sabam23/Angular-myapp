@@ -1,0 +1,19 @@
+<div class="table-container">
+    <div class="back-btn" routerLink="/quiz">Back</div>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Difficulty</th>
+            <th>Questions</th>
+            <th>Correct Answers</th>
+            <th>%</th>
+        </tr>
+        <tr *ngFor="let data of userData | async">
+            <td>{{ data.category }}</td>
+            <td>{{ data.difficulty | uppercase }}</td>
+            <td>{{ data.questions }}</td>
+            <td>{{ data.correctCount }}</td>
+            <td>{{ data.percentage }}</td>
+        </tr>
+    </table>
+</div>

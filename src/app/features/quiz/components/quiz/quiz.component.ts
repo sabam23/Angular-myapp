@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BehaviorSubject, map, tap, throttle, throttleTime } from 'rxjs';
+import { AuthorizationService } from 'src/app/core/services/authorization.service';
 import { Question } from '../../../dashboard/interfaces/question.interface';
+import { UserDataService } from '../../services/user-data.service';
 
 @Component({
   selector: 'app-quiz',
@@ -10,10 +12,13 @@ import { Question } from '../../../dashboard/interfaces/question.interface';
 })
 export class QuizComponent implements OnInit {
 
-  constructor() { }
+  constructor(private quizData: UserDataService, public auth: AuthorizationService) { }
 
   @Input() questions!: BehaviorSubject<Question[]>;
   @Input() questionsLimit!: number;
+  @Input() category!: string;
+  @Input() difficulty!: string;
+  
 
   ngOnInit(): void {
     try {
@@ -73,6 +78,17 @@ export class QuizComponent implements OnInit {
     if (this.QuizAnswers.get("answer")?.value === this.ca) {
       this.correctCount++
     }
+
+    this.quizData.addData(
+      {
+        "userId": this.auth.loggedId,
+        "category": this.category,
+        "difficulty" : this.difficulty,
+        "questions": this.questionsLimit,
+        "correctCount": this.correctCount,
+        "percentage": `${(this.correctCount * 100) / this.questionsLimit}%`
+      }
+    ).subscribe();
   }
 
   nextQuestion(): void {

@@ -21,5 +21,52 @@
       "repeatPassword": "lukeluke",
       "id": 3
     }
+  ],
+  "quizdata": [
+    {
+      "id": 1,
+      "userId": 1,
+      "category": "Music",
+      "difficulty": "Hard",
+      "questions": 10,
+      "correctCount": 4,
+      "percentage": "40%"
+    },
+    {
+      "userId": 1,
+      "category": "arts_and_literature",
+      "difficulty": "easy",
+      "questions": 5,
+      "correctCount": 2,
+      "percentage": "40%",
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "category": "film_and_tv",
+      "difficulty": "hard",
+      "questions": 5,
+      "correctCount": 2,
+      "percentage": "40%",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "category": "arts_and_literature",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 3,
+      "percentage": "30%",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "category": "geography",
+      "difficulty": "hard",
+      "questions": 17,
+      "correctCount": 4,
+      "percentage": "23.529411764705884%",
+      "id": 5
+    }
   ]
 }

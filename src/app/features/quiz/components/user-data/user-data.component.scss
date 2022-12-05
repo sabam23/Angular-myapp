@@ -1,0 +1,58 @@
+.table-container {
+  display: flex;
+  min-height: 650px;  
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+  max-width: 1300px;
+  border-radius: 30px;
+  background-color: #38383f;
+  padding-top: 80px;
+  margin: auto;
+  position: relative;
+
+  & > table {
+    width: 80%;
+    max-width: 950px;
+    color: white;
+    text-align: center;
+    font-family: ubuntu;
+
+    &  th {
+        padding: 15px;
+        font-size: 23px;
+        font-weight: bold;
+        border-radius: 30px;
+        color: #ec6565;
+        font-family: ubuntu;
+        border-bottom: solid #28282d 1px;
+      }
+
+      & > tr{
+        color: white;
+
+        &:hover:not(:first-child) {
+            background-color: #4d4d57;
+        }
+      }
+    
+      &  td {
+        padding: 15px;
+        text-align: center; 
+      }
+  }
+
+  & > .back-btn {
+    color: white;
+    border-bottom: solid white 4px;
+    cursor: pointer;
+    font-family: ubuntu;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+
+    &:hover {
+        border-bottom: #ec6565 solid 4px;
+    }
+  }
+}
