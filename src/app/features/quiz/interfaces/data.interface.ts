@@ -5,4 +5,5 @@ export interface Idata {
   questions: number;
   correctCount: number;
   percentage: string;
+  date: string;
 }

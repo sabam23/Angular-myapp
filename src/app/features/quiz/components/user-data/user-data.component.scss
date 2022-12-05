@@ -10,7 +10,6 @@
   padding-top: 80px;
   margin: auto;
   position: relative;
-
   & > h2 {
     color: rgb(162, 155, 155);
     font-family:ubnutu;
@@ -18,12 +17,13 @@
     margin-top: 30px;
   }
 
-  & > table {
+  &  table {
     width: 80%;
     max-width: 950px;
     color: white;
     text-align: center;
     font-family: ubuntu;
+
 
     &  th {
         padding: 15px;

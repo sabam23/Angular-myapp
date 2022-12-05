@@ -30,6 +30,7 @@
     </form>
 
     <div class="stat-btn" [routerLink]="['/quiz/userdata']" *ngIf="!toggleQuiz">See Your stats</div>
+    
     <app-quiz *ngIf="toggleQuiz" [questions]="questions" [questionsLimit]="sliderValue" [category]="this.quizForm.get('category')?.value" [difficulty]="this.quizForm.get('difficulty')?.value"></app-quiz>
 </div>
 <router-outlet></router-outlet>

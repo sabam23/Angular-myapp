@@ -86,7 +86,8 @@ export class QuizComponent implements OnInit {
         "difficulty" : this.difficulty,
         "questions": this.questionsLimit,
         "correctCount": this.correctCount,
-        "percentage": `${(this.correctCount * 100) / this.questionsLimit}%`
+        "percentage": `${(this.correctCount * 100) / this.questionsLimit}%`,
+        "date": Date.now().toString()
       }
     ).subscribe();
   }

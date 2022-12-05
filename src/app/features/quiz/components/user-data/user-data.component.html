@@ -10,6 +10,7 @@
             <th>Questions</th>
             <th>Correct Answers</th>
             <th>%</th>
+            <th>Date</th>
         </tr>
         <tr *ngFor="let data of userData | async">
             <td>{{ data.category }}</td>
@@ -17,6 +18,7 @@
             <td>{{ data.questions }}</td>
             <td>{{ data.correctCount }}</td>
             <td>{{ data.percentage }}</td>
+            <td>{{ data.date | date }}</td>
         </tr>
     </table>
 </div>
