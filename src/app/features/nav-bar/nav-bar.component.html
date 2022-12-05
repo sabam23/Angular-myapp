@@ -3,6 +3,8 @@
     <div class="content" [class.is-open]="isMenuOpen">
         <div class="nav-tab" routerLinkActive="active" routerLink="home">HOME</div>
         <div class="nav-tab" routerLink="/quiz" routerLinkActive="active" *ngIf="auth.isLoggedIn">Quiz Game</div>
+        <div class="nav-tab">Contact</div>
+        <div class="nav-tab">About</div>
         <div class="nav-tab usernmae" *ngIf="auth.isLoggedIn" title="username">{{ this.auth.username | async }}</div>
         <div class="nav-tab" routerLink="/auth" routerLinkActive="active" *ngIf="!auth.isLoggedIn">Log In</div>
     </div>
