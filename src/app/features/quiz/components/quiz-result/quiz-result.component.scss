@@ -42,3 +42,19 @@
         }
     }
 }
+
+.stat-btn {
+    position: absolute;
+    color: white;
+    font-family: ubuntu;
+    border-bottom: solid red 4px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    cursor: pointer;
+  
+    &:hover {
+      border-bottom: solid rgb(252, 98, 98) 4px;
+    }
+  }

@@ -1,6 +1,9 @@
 <div class="table-container">
     <div class="back-btn" routerLink="/quiz">Back</div>
-    <table>
+
+    <h2 *ngIf="dataArray.length === 0">No Data</h2>
+
+    <table *ngIf="dataArray.length > 0">
         <tr>
             <th>Category</th>
             <th>Difficulty</th>

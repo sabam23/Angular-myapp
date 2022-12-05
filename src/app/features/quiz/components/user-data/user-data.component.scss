@@ -11,6 +11,13 @@
   margin: auto;
   position: relative;
 
+  & > h2 {
+    color: rgb(162, 155, 155);
+    font-family:ubnutu;
+    font-size: 45px;
+    margin-top: 30px;
+  }
+
   & > table {
     width: 80%;
     max-width: 950px;

@@ -20,6 +20,13 @@
       "password": "lukeluke",
       "repeatPassword": "lukeluke",
       "id": 3
+    },
+    {
+      "username": "mitzy",
+      "email": "mitzy@gmail.com",
+      "password": "m1234567",
+      "repeatPassword": "m1234567",
+      "id": 4
     }
   ],
   "quizdata": [
@@ -67,6 +74,24 @@
       "correctCount": 4,
       "percentage": "23.529411764705884%",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "category": "arts_and_literature",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 4,
+      "percentage": "40%",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "category": "geography",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 8,
+      "percentage": "80%",
+      "id": 7
     }
   ]
 }
