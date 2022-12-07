@@ -12,6 +12,7 @@ import { QuizResultComponent } from './features/quiz/components/quiz-result/quiz
 import { AuthorizationComponent } from './features/authorization/components/authorization.component';
 import { HomeComponent } from './features/homePage/components/home/home.component';
 import { UserDataComponent } from './features/quiz/components/user-data/user-data.component';
+import { CategoryFormatPipe } from './features/quiz/pipes/category-format.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserDataComponent } from './features/quiz/components/user-data/user-dat
     QuizResultComponent,
     AuthorizationComponent,
     HomeComponent,
-    UserDataComponent
+    UserDataComponent,
+    CategoryFormatPipe
   ],
   imports: [
     BrowserModule,

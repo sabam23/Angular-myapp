@@ -13,7 +13,7 @@
             <th>Date</th>
         </tr>
         <tr *ngFor="let data of userData | async">
-            <td>{{ data.category }}</td>
+            <td>{{ data.category | categoryFormat }}</td>
             <td>{{ data.difficulty | uppercase }}</td>
             <td>{{ data.questions }}</td>
             <td>{{ data.correctCount }}</td>

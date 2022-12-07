@@ -49,6 +49,26 @@
       "percentage": "10%",
       "date": "1670277488214",
       "id": 2
+    },
+    {
+      "userId": 3,
+      "category": "history",
+      "difficulty": "medium",
+      "questions": 1,
+      "correctCount": 1,
+      "percentage": "100%",
+      "date": "1670367658363",
+      "id": 3
+    },
+    {
+      "userId": 3,
+      "category": "arts_and_literature",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 2,
+      "percentage": "20%",
+      "date": "1670420353504",
+      "id": 4
     }
   ]
 }
