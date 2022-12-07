@@ -7,7 +7,7 @@
   max-width: 1300px;
   border-radius: 30px;
   background-color: #38383f;
-  padding-top: 80px;
+  padding-top: 100px;
   margin: auto;
   position: relative;
   & > h2 {
@@ -18,12 +18,12 @@
   }
 
   &  table {
-    width: 80%;
+    width: 100%;
     max-width: 950px;
     color: white;
     text-align: center;
     font-family: ubuntu;
-
+    margin-bottom: 30px;
 
     &  th {
         padding: 15px;
@@ -62,4 +62,12 @@
         border-bottom: #ec6565 solid 4px;
     }
   }
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ec6565;
+  border-radius: 10px;
 }

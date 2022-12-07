@@ -2,23 +2,24 @@
     <div class="back-btn" routerLink="/quiz">Back</div>
 
     <h2 *ngIf="dataArray.length === 0">No Data</h2>
-
-    <table *ngIf="dataArray.length > 0">
-        <tr>
-            <th>Category</th>
-            <th>Difficulty</th>
-            <th>Questions</th>
-            <th>Correct Answers</th>
-            <th>%</th>
-            <th>Date</th>
-        </tr>
-        <tr *ngFor="let data of userData | async">
-            <td>{{ data.category | categoryFormat }}</td>
-            <td>{{ data.difficulty | uppercase }}</td>
-            <td>{{ data.questions }}</td>
-            <td>{{ data.correctCount }}</td>
-            <td>{{ data.percentage }}</td>
-            <td>{{ data.date | date }}</td>
-        </tr>
-    </table>
+    <div style="overflow-x:auto;">
+        <table *ngIf="dataArray.length > 0">
+            <tr>
+                <th>Category</th>
+                <th>Difficulty</th>
+                <th>Questions</th>
+                <th>Correct Answers</th>
+                <th>%</th>
+                <th>Date</th>
+            </tr>
+            <tr *ngFor="let data of userData | async">
+                <td>{{ data.category | categoryFormat }}</td>
+                <td>{{ data.difficulty | uppercase }}</td>
+                <td>{{ data.questions }}</td>
+                <td>{{ data.correctCount }}</td>
+                <td>{{ data.percentage }}</td>
+                <td>{{ data.date | date }}</td>
+            </tr>
+        </table>
+    </div>
 </div>

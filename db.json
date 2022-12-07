@@ -69,6 +69,26 @@
       "percentage": "20%",
       "date": "1670420353504",
       "id": 4
+    },
+    {
+      "userId": 3,
+      "category": "general_knowledge",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 5,
+      "percentage": "50%",
+      "date": "1670431776738",
+      "id": 5
+    },
+    {
+      "userId": 3,
+      "category": "society_and_culture",
+      "difficulty": "easy",
+      "questions": 1,
+      "correctCount": 1,
+      "percentage": "100%",
+      "date": "1670431926781",
+      "id": 6
     }
   ]
 }
