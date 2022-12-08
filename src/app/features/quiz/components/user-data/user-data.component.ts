@@ -13,7 +13,7 @@ export class UserDataComponent implements OnInit{
   constructor(public quizData: UserDataService) {}
 
   userData: BehaviorSubject<Idata[]> = new BehaviorSubject<Idata[]>([] as Idata[]);
-  dataArray!: Idata[];
+  dataArray: Idata[] = [];
 
   ngOnInit(): void {
     this.quizData.getUserData().pipe(
