@@ -15,5 +15,5 @@
         <span class="material-symbols-outlined">{{ isMenuOpen ? "close" : "menu" }}</span>
     </div>
 
-    <app-user-menu *ngIf="isUserMenuOpen && auth.isLoggedIn"></app-user-menu>
+    <app-user-menu *ngIf="isUserMenuOpen && auth.isLoggedIn" (toggleMunu)="outputFun($event)"></app-user-menu>
 </div>

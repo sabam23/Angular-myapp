@@ -23,4 +23,8 @@ export class NavBarComponent implements OnInit {
   toggleUserMenu(): void {
     this.isUserMenuOpen = !this.isUserMenuOpen;
   }
+
+  outputFun(toggleMenu: boolean) {
+    this.isUserMenuOpen = toggleMenu;
+  }
 }

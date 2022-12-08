@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { AuthorizationService } from 'src/app/core/services/authorization.service';
 
 @Component({
@@ -10,9 +10,12 @@ export class UserMenuComponent implements OnInit{
   ngOnInit(): void {
   }
 
+  @Output() toggleMunu = new EventEmitter<boolean>();
+
   constructor(public auth: AuthorizationService) {}
 
   logOut(): void {
     this.auth.isLoggedIn = false;
+    this.toggleMunu.emit(false);
   }
 }
