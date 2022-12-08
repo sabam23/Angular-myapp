@@ -77,12 +77,15 @@
 .my-pagination ::ng-deep .ngx-pagination{
  & .current{
   background: red;
+  border-radius: 5px;
  }
  & a {
   color: white;
+  border-radius: 5px;
 
   &:hover {
     color: black;
+    background-color: white;
   }
  }
 }

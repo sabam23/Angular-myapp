@@ -21,6 +21,6 @@
                 <td>{{ data.date | date }}</td>
             </tr>
         </table>
-        <pagination-controls (pageChange)="pages = $event" (autoHide)="true" class="my-pagination"></pagination-controls>
+        <pagination-controls (pageChange)="pages = $event" [autoHide]="true" class="my-pagination"></pagination-controls>
     </div>
 </div>
