@@ -5,7 +5,7 @@
         <div class="nav-tab" routerLink="/quiz" routerLinkActive="active" *ngIf="auth.isLoggedIn">Quiz Game</div>
         <div class="nav-tab">Contact</div>
         <div class="nav-tab">About</div>
-        <div class="nav-tab usernmae" *ngIf="auth.isLoggedIn" title="username">{{ this.auth.username | async }}</div>
+        <div class="nav-tab usernmae" *ngIf="auth.isLoggedIn" title="username" (click)="toggleUserMenu()">{{ this.auth.username | async }}</div>
         <div class="nav-tab" routerLink="/auth" routerLinkActive="active" *ngIf="!auth.isLoggedIn">Log In</div>
     </div>
     
@@ -14,4 +14,6 @@
     <div class="menu-icon" (click)="toggleMenu()">
         <span class="material-symbols-outlined">{{ isMenuOpen ? "close" : "menu" }}</span>
     </div>
+
+    <app-user-menu *ngIf="isUserMenuOpen && auth.isLoggedIn"></app-user-menu>
 </div>

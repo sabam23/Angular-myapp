@@ -89,6 +89,26 @@
       "percentage": "100%",
       "date": "1670431926781",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "category": "geography",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 8,
+      "percentage": "80%",
+      "date": "1670432971135",
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "category": "film_and_tv",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 7,
+      "percentage": "70%",
+      "date": "1670508491568",
+      "id": 8
     }
   ]
 }

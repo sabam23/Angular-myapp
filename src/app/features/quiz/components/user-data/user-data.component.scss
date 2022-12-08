@@ -51,13 +51,15 @@
 
   & > .back-btn {
     color: white;
+    border: none;
     border-bottom: solid white 4px;
     cursor: pointer;
     font-family: ubuntu;
     position: absolute;
     top: 40px;
     left: 40px;
-
+    background-color: #38383f;
+    
     &:hover {
         border-bottom: #ec6565 solid 4px;
     }

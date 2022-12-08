@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './features/nav-bar/nav-bar.component';
+import { NavBarComponent } from './features/nav-bar/components/nav-bar/nav-bar.component';
 import { DashboardComponent } from './features/dashboard/Components/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -13,6 +13,7 @@ import { AuthorizationComponent } from './features/authorization/components/auth
 import { HomeComponent } from './features/homePage/components/home/home.component';
 import { UserDataComponent } from './features/quiz/components/user-data/user-data.component';
 import { CategoryFormatPipe } from './features/quiz/pipes/category-format.pipe';
+import { UserMenuComponent } from './features/nav-bar/components/user-menu/user-menu.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CategoryFormatPipe } from './features/quiz/pipes/category-format.pipe';
     AuthorizationComponent,
     HomeComponent,
     UserDataComponent,
-    CategoryFormatPipe
+    CategoryFormatPipe,
+    UserMenuComponent
   ],
   imports: [
     BrowserModule,
