@@ -31,16 +31,6 @@
   ],
   "quizdata": [
     {
-      "id": 1,
-      "userId": 1,
-      "category": "Music",
-      "difficulty": "Hard",
-      "questions": 10,
-      "correctCount": 4,
-      "percentage": "40%",
-      "date": "Dec 6, 2022"
-    },
-    {
       "userId": 1,
       "category": "film_and_tv",
       "difficulty": "medium",
@@ -48,7 +38,7 @@
       "correctCount": 1,
       "percentage": "10%",
       "date": "1670277488214",
-      "id": 2
+      "id": 1
     },
     {
       "userId": 3,
@@ -58,7 +48,7 @@
       "correctCount": 1,
       "percentage": "100%",
       "date": "1670367658363",
-      "id": 3
+      "id": 2
     },
     {
       "userId": 3,
@@ -68,7 +58,7 @@
       "correctCount": 2,
       "percentage": "20%",
       "date": "1670420353504",
-      "id": 4
+      "id": 3
     },
     {
       "userId": 3,
@@ -78,7 +68,7 @@
       "correctCount": 5,
       "percentage": "50%",
       "date": "1670431776738",
-      "id": 5
+      "id": 4
     },
     {
       "userId": 3,
@@ -88,7 +78,7 @@
       "correctCount": 1,
       "percentage": "100%",
       "date": "1670431926781",
-      "id": 6
+      "id": 5
     },
     {
       "userId": 1,
@@ -98,7 +88,7 @@
       "correctCount": 8,
       "percentage": "80%",
       "date": "1670432971135",
-      "id": 7
+      "id": 6
     },
     {
       "userId": 3,
@@ -108,7 +98,77 @@
       "correctCount": 7,
       "percentage": "70%",
       "date": "1670508491568",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "category": "geography",
+      "difficulty": "easy",
+      "questions": 1,
+      "correctCount": 1,
+      "percentage": "100%",
+      "date": "1670511362007",
       "id": 8
+    },
+    {
+      "userId": 3,
+      "category": "sport_and_leisure",
+      "difficulty": "medium",
+      "questions": 4,
+      "correctCount": 1,
+      "percentage": "25%",
+      "date": "1670512107434",
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "category": "science",
+      "difficulty": "easy",
+      "questions": 1,
+      "correctCount": 1,
+      "percentage": "100%",
+      "date": "1670512373466",
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "category": "film_and_tv",
+      "difficulty": "easy",
+      "questions": 1,
+      "correctCount": 1,
+      "percentage": "100%",
+      "date": "1670512380810",
+      "id": 11
+    },
+    {
+      "userId": 3,
+      "category": "arts_and_literature",
+      "difficulty": "easy",
+      "questions": 1,
+      "correctCount": 1,
+      "percentage": "100%",
+      "date": "1670512387977",
+      "id": 12
+    },
+    {
+      "userId": 3,
+      "category": "film_and_tv",
+      "difficulty": "easy",
+      "questions": 1,
+      "correctCount": 1,
+      "percentage": "100%",
+      "date": "1670512400806",
+      "id": 13
+    },
+    {
+      "userId": 3,
+      "category": "arts_and_literature",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 2,
+      "percentage": "20%",
+      "date": "1670512416828",
+      "id": 14
     }
   ]
 }

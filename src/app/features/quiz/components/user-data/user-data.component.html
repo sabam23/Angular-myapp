@@ -12,7 +12,7 @@
                 <th>%</th>
                 <th>Date</th>
             </tr>
-            <tr *ngFor="let data of userData | async">
+            <tr *ngFor="let data of dataArray | paginate: { itemsPerPage: 8, currentPage: pages }">
                 <td>{{ data.category | categoryFormat }}</td>
                 <td>{{ data.difficulty | uppercase }}</td>
                 <td>{{ data.questions }}</td>
@@ -21,5 +21,6 @@
                 <td>{{ data.date | date }}</td>
             </tr>
         </table>
+        <pagination-controls (pageChange)="pages = $event" (autoHide)="true" class="my-pagination"></pagination-controls>
     </div>
 </div>

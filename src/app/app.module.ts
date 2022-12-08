@@ -14,6 +14,7 @@ import { HomeComponent } from './features/homePage/components/home/home.componen
 import { UserDataComponent } from './features/quiz/components/user-data/user-data.component';
 import { CategoryFormatPipe } from './features/quiz/pipes/category-format.pipe';
 import { UserMenuComponent } from './features/nav-bar/components/user-menu/user-menu.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { UserMenuComponent } from './features/nav-bar/components/user-menu/user-
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

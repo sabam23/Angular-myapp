@@ -17,6 +17,6 @@ export class UserDataService {
   }
 
   getUserData(): Observable<Idata[]> {
-    return this.http.get<Idata[]>(`${this.baseUrl}quizdata?userId=${this.auth.loggedId}`);
+    return this.http.get<Idata[]>(`${this.baseUrl}quizdata?userId=${this.auth.loggedId}&_sort=date&_order=desc`);
   }
 }

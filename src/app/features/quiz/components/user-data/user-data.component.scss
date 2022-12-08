@@ -73,3 +73,16 @@
   background: #ec6565;
   border-radius: 10px;
 }
+
+.my-pagination ::ng-deep .ngx-pagination{
+ & .current{
+  background: red;
+ }
+ & a {
+  color: white;
+
+  &:hover {
+    color: black;
+  }
+ }
+}

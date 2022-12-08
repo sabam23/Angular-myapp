@@ -24,4 +24,7 @@ export class UserDataComponent implements OnInit{
         }
       );
   }
+
+  pages: number = 1;
+  dataset: any[] = ['1','2','3','4','5','6','7','8'];
 }
