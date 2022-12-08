@@ -1,8 +1,9 @@
 .table-container {
   display: flex;
-  min-height: 650px;  
-  justify-content: center;
-  align-items: flex-start;
+  min-height: 650px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 70%;
   max-width: 1300px;
   border-radius: 30px;
