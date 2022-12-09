@@ -1,31 +1,39 @@
 .user-menu {
-    width: 180px;
-    height: 200px;
-    background-color: #575760;
+    width: 280px;
     position: absolute;
-    top: 120%;
+    height: auto;
+    top: 110%;
     right: 10px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: auto; 
+    background-color: #f8f8f8;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+    @media (max-width: 550px) {
+        top: 100%;
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
 
     & > div {
-        color: white;
-        width: 95%;
+        font-family: Raleway;
+        color: #38383f;
+        width: 90%;
         cursor: pointer;
-        height: 35px;
+        height: 40px;
         display: flex;
-        border-radius: 20px;
+        border-radius: 7px;
         justify-content: space-between;
         align-items: center;
         &:hover {
-            background-color: #696974;
-            & span {
-                color: #ee0000;
-            }
+            background-color: #ededf1;
         }
     }
 }

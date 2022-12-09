@@ -169,6 +169,16 @@
       "percentage": "20%",
       "date": "1670512416828",
       "id": 14
+    },
+    {
+      "userId": 3,
+      "category": "arts_and_literature",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 7,
+      "percentage": "70%",
+      "date": "1670596872212",
+      "id": 15
     }
   ]
 }
