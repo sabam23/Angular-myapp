@@ -5,17 +5,20 @@
         <div class="nav-tab" routerLink="/quiz" routerLinkActive="active" *ngIf="auth.isLoggedIn">Quiz Game</div>
         <div class="nav-tab">Contact</div>
         <div class="nav-tab">About</div>
-        <div class="nav-tab usernmae" *ngIf="auth.isLoggedIn" title="username" (click)="toggleUserMenu()">
-            {{ this.auth.username | async }}
-             <span class="material-symbols-outlined">{{ isUserMenuOpen ? "arrow_drop_up" : "arrow_drop_down" }}</span></div>
+        <div class="nav-tab username" ClickOutside (clickOutside)="clickedOutside()" *ngIf="auth.isLoggedIn">
+            <div title="username" (click)="toggleUserMenu()">
+                {{ this.auth.username | async }}
+                 <span class="material-symbols-outlined">{{ isUserMenuOpen ? "arrow_drop_up" : "arrow_drop_down" }}</span>
+            </div>
+            <!--User Menu-->
+            <app-user-menu *ngIf="isUserMenuOpen" (toggleMunu)="outputFun($event)"></app-user-menu>          
+        </div>
         <div class="nav-tab" routerLink="/auth" routerLinkActive="active" *ngIf="!auth.isLoggedIn">Log In</div>
     </div>
     
-
     <!-- Menu For Responsive Layout -->
     <div class="menu-icon" (click)="toggleMenu()">
         <span class="material-symbols-outlined">{{ isMenuOpen ? "close" : "menu" }}</span>
     </div>
-
-    <app-user-menu *ngIf="isUserMenuOpen && auth.isLoggedIn" (toggleMunu)="outputFun($event)"></app-user-menu>
 </div>
+

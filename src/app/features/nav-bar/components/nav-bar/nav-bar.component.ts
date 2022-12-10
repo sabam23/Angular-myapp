@@ -27,4 +27,8 @@ export class NavBarComponent implements OnInit {
   outputFun(toggleMenu: boolean) {
     this.isUserMenuOpen = toggleMenu;
   }
+
+  clickedOutside(): void {
+    this.isUserMenuOpen = false;
+  }
 }

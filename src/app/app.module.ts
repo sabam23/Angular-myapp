@@ -15,6 +15,7 @@ import { UserDataComponent } from './features/quiz/components/user-data/user-dat
 import { CategoryFormatPipe } from './features/quiz/pipes/category-format.pipe';
 import { UserMenuComponent } from './features/nav-bar/components/user-menu/user-menu.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ClickOutsideDirective } from './core/directives/click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HomeComponent,
     UserDataComponent,
     CategoryFormatPipe,
-    UserMenuComponent
+    UserMenuComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,

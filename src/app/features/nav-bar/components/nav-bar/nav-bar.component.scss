@@ -27,10 +27,17 @@
       height: 99%;
       color: white;
       min-width: 90px;
-      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 100%;
+      }
 
       &:last-child {
         margin-left: auto;
@@ -39,7 +46,7 @@
         }
       }
 
-      &:hover {
+      &:hover:not(.username) {
         background-color: #ec4242;
         cursor: pointer;
         border-radius: 5px;
@@ -102,6 +109,12 @@
         left: 1%;
       }
   }
+}
+
+.username:hover {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #f02424;
 }
 
 .active {
