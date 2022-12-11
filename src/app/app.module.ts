@@ -16,6 +16,10 @@ import { CategoryFormatPipe } from './features/quiz/pipes/category-format.pipe';
 import { UserMenuComponent } from './features/nav-bar/components/user-menu/user-menu.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ClickOutsideDirective } from './core/directives/click-outside.directive';
+import { FeedbackModalComponent } from './features/feedback-modal/feedback-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -29,14 +33,18 @@ import { ClickOutsideDirective } from './core/directives/click-outside.directive
     UserDataComponent,
     CategoryFormatPipe,
     UserMenuComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    FeedbackModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

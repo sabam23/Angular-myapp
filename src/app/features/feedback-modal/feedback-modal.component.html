@@ -1,0 +1,10 @@
+<div class="feedback-modal-overlay"></div>
+<div class="feedback">
+    <div class="title"><h1>Feedback</h1></div>
+    <span class="material-symbols-outlined">close</span>
+    <form [formGroup]="feedback">
+        <input type="text" placeholder="Message" formControlName="message">
+        <button>Send</button>
+    </form>
+</div>
+

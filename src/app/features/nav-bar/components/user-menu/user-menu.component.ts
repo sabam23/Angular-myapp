@@ -18,4 +18,5 @@ export class UserMenuComponent implements OnInit{
     this.auth.isLoggedIn = false;
     this.toggleMunu.emit(false);
   }
+
 }

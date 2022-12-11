@@ -3,13 +3,18 @@
   min-height: 650px;
   justify-content: center;
   align-items: flex-start;
-  width: 70%;
+  width: 75%;
   max-width: 1300px;
   border-radius: 30px;
   background-color: #38383f;
   padding-top: 100px;
   margin: auto;
   position: relative;
+
+  @media (max-width: 700px) {
+    width: 90%;
+  }
+
   & > h2 {
     color: rgb(162, 155, 155);
     font-family:ubnutu;

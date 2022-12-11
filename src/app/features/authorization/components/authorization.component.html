@@ -71,7 +71,7 @@
               </p>
             </div>
           </label>
-          <button type="button" class="signIn-btn" (click)="login()">
+          <button type="button" class="signIn-btn" (click)="login();">
             SIGN IN
           </button>
           <p>
@@ -202,7 +202,7 @@
           </label>
           <button
             class="signIn-btn"
-            (click)="addStudent(); loginPage = true; registerPage = false"
+            (click)="addStudent(); loginPage = true; registerPage = false; openSnackBar('Registration is Succesful')"
             [disabled]="registerForm.invalid"
           >
             REGISTER

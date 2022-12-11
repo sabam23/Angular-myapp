@@ -7,6 +7,8 @@ import { User } from '../interfaces/user.interface';
 import { LoginForm } from '../interfaces/loginForm.inreface';
 import { UserForm } from '../interfaces/userForm.interface';
 import { AuthorizationService } from 'src/app/core/services/authorization.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-login',
@@ -16,8 +18,8 @@ import { AuthorizationService } from 'src/app/core/services/authorization.servic
 })
 
 export class AuthorizationComponent implements OnInit {
-  constructor(private loginService: LoginService, private router: Router, private auth: AuthorizationService) {}
-
+  constructor(private loginService: LoginService, private router: Router, private auth: AuthorizationService, private _snackBar: MatSnackBar) {}
+ 
   ngOnInit(): void {
     this.getFullData();
   }
@@ -25,7 +27,6 @@ export class AuthorizationComponent implements OnInit {
   addStudent(): void {
     if (this.registerForm.valid) {
       this.loginService.addStudent(this.registerForm.value as User).subscribe();
-      window.alert('Student Registered!');
       this.registerForm.reset();
       this.getFullData();
     }
@@ -56,7 +57,8 @@ export class AuthorizationComponent implements OnInit {
           this.auth.changeName(user.username);
           this.router.navigateByUrl('/quiz').then();
           this.registerForm.reset();
-          break;
+          this.openSnackBar('Authorization is Succesful');
+          break;         
         } else {
           this.loginForm.get('password')?.setErrors({ password: true });
           break;
@@ -108,4 +110,8 @@ export class AuthorizationComponent implements OnInit {
   //for UI
   loginPage: boolean = true;
   registerPage: boolean = false;
+
+  openSnackBar(msg: string) {
+    this._snackBar.open(msg,'', {duration: 3000, horizontalPosition: 'start'});
+  }
 }

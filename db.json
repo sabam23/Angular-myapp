@@ -27,6 +27,20 @@
       "password": "m1234567",
       "repeatPassword": "m1234567",
       "id": 4
+    },
+    {
+      "username": "guk22",
+      "email": "guk@gmail.com",
+      "password": "gukaguka",
+      "repeatPassword": "gukaguka",
+      "id": 5
+    },
+    {
+      "username": "hulk",
+      "email": "hulk@gmail.com",
+      "password": "hulkhulk",
+      "repeatPassword": "hulkhulk",
+      "id": 6
     }
   ],
   "quizdata": [
@@ -179,6 +193,16 @@
       "percentage": "70%",
       "date": "1670596872212",
       "id": 15
+    },
+    {
+      "userId": 4,
+      "category": "film_and_tv",
+      "difficulty": "easy",
+      "questions": 10,
+      "correctCount": 2,
+      "percentage": "20%",
+      "date": "1670676576178",
+      "id": 16
     }
   ]
 }

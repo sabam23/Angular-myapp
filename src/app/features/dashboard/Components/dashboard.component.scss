@@ -1,5 +1,5 @@
 .dashboard-container {
-  width: 70%;
+  width: 75%;
   max-width: 1300px;
   margin: auto;
   height: 650px;
@@ -12,7 +12,7 @@
   position: relative;
 
   @media (max-width: 700px) {
-    width: 85%;
+    width: 90%;
   }
 
   & > .quiz-form {
