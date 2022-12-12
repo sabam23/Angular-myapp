@@ -11,7 +11,7 @@
                  <span class="material-symbols-outlined">{{ isUserMenuOpen ? "arrow_drop_up" : "arrow_drop_down" }}</span>
             </div>
             <!--User Menu-->
-            <app-user-menu *ngIf="isUserMenuOpen" (toggleMunu)="outputFun($event)"></app-user-menu>          
+            <app-user-menu *ngIf="isUserMenuOpen" (toggleMenu)="outputFun($event)"></app-user-menu>    
         </div>
         <div class="nav-tab" routerLink="/auth" routerLinkActive="active" *ngIf="!auth.isLoggedIn">Log In</div>
     </div>

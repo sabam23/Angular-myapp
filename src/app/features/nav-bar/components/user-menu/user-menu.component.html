@@ -3,5 +3,5 @@
     <div>Activity log <span class="material-symbols-outlined">Web</span></div>
     <div>Help Center <span class="material-symbols-outlined">Help</span></div>
     <div>Feedback <span class="material-symbols-outlined">Report</span></div>
-    <div (click)="logOut()" routerLink="/home">Log Out <span class="material-symbols-outlined">logout</span></div>
+    <div (click)="logOut(); openSnackBar('Logged Out')" routerLink="/home">Log Out <span class="material-symbols-outlined">logout</span></div>
 </div>
